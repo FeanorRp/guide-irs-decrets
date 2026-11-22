@@ -220,6 +220,7 @@
       perUnit: /par (contrat|produit|personne|employé)|nombre de semaines/.test(text),
       withSum: /somme (due|manquante)|trop-perçu|plus-value/i.test(text),
       pct: pct ? num(pct[1]) / 100 : 0,
+      double: /doublée/.test(text),
       unit: /semaines/.test(text) ? "semaines" : (text.match(/par (contrat|produit|personne|employé)/) || [, "unités"])[1]
     };
   }
@@ -278,10 +279,10 @@
       label = b.infraction + (rec ? " (Type 2)" : " (Type 1)");
       var base = r.fixed * (r.perUnit ? qty : 1);
       var extra = (r.withSum ? sum : 0) + sum * r.pct;
-      total = base + extra;
+      total = (base + extra) * (r.double ? 2 : 1);
       detail = "Barème : " + text + ". Calcul : " + money(r.fixed) + (r.perUnit ? " x " + qty + " " + r.unit : "") +
         (r.withSum ? " + somme " + money(sum) : "") + (r.pct ? " + " + Math.round(r.pct * 100) + " % de " + money(sum) : "") +
-        " = " + money(total) + ".";
+        (r.double ? ", doublé" : "") + " = " + money(total) + ".";
     }
     document.getElementById("cOut").innerHTML = '<div class="total">' + money(total) + "</div><div>" + esc(detail) + "</div>";
     document.getElementById("cOut").dataset.summary = label + " : " + money(total) + ". " + detail;
