@@ -113,7 +113,7 @@ window.IRS_INTENTS = [
     answer: "Chaque entreprise doit avoir un règlement intérieur validé par un avocat (sécurité, harcèlement et discriminations, échelle des sanctions, tenues et véhicules de fonction). Inexistant : 1 000 $ ; incomplet : avertissement.",
     refs: ["CE.11", "B.16"] },
   { all: [["salaire", "salaires", "grille", "paye"]],
-    answer: "Les salaires suivent la grille obligatoire (catégorie « Grille des salaires »), et chaque versement doit être tracé. Pour un poste précis, demandez par exemple « salaire d'un médecin » ou « salaire patron garage nord ». Non-respect de la grille : 3 000 $ + le trop-perçu + 10 % d'intérêts, par employé.",
+    answer: "Les salaires suivent la grille obligatoire (catégorie « Grille des salaires »), et chaque versement doit être tracé. Pour un poste précis, demandez par exemple « salaire d'un médecin » ou « salaire patron garage ». Non-respect de la grille : 3 000 $ + le trop-perçu + 10 % d'intérêts, par employé.",
     refs: ["I.7", "B.9"] },
   { all: [["benevole", "benevoles", "benevolat"]],
     answer: "Le bénévolat n'est autorisé que dans les associations à but non lucratif et les services publics. Un « bénévole » dans une entreprise commerciale est considéré comme un employé non déclaré.",
@@ -141,6 +141,10 @@ window.IRS_INTENTS = [
   { prio: 1, all: [["sasp", "policier", "policiers", "sherif", "sherifs", "lssd"]],
     answer: "Dans le Nord, la sécurité relève des seuls shérifs du Nord. La SASP ne peut pas y intervenir, en service ou hors service, sauf autorisation du Shérif du Nord ou de la Maire du Nord (décret n° 002). Les perquisitions et arrestations liées à un dossier IRS y sont faites par les shérifs du Nord.",
     refs: ["N-002", "IRS.4"] },
+
+  { all: [["prime", "primes", "bonus"]],
+    answer: "Dans les entreprises privées, une prime peut atteindre au maximum 2 500 $ par semaine.",
+    refs: ["I.7"] },
 
   // ---------- Véhicules ----------
   { all: [["vehicule", "voiture", "vehicules", "voitures"], ["entreprise", "societe", "boite", "fonction", "service"], ["achat", "acheter", "achete", "acquerir", "acquisition", "vendre", "vente", "revendre"]],
