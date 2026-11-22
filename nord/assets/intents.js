@@ -41,7 +41,7 @@ window.IRS_INTENTS = [
     answer: "Les impôts sont calculés chaque semaine, du lundi 00h00 au dimanche 23h59. La semaine écoulée se déclare et se paie au plus tard le mardi 23h59 de la semaine suivante.\nUne semaine sans bénéfice se déclare quand même, avec une déclaration symbolique de 1 $.",
     refs: ["I.1"] },
   { all: [["comment", "procedure", "etape", "faire"], ["declar", "declarer", "declaration"]],
-    answer: "1. Déclarer les revenus de la semaine sur la fiche impôts.\n2. Aller à la banque ou à un ATM.\n3. Virer le montant indiqué vers le compte du gouvernement (IBAN GOUV ou IBAN IRS).\n4. Conserver la preuve de virement et la joindre à la fiche impôts.\nLes paiements par facture ou carte sont taxés automatiquement : seul le reste (liquide, virements hors facture) est à déclarer.",
+    answer: "1. Déclarer les revenus de la semaine sur la fiche impôts.\n2. Aller à la banque ou à un ATM.\n3. Virer le montant indiqué vers le compte de la Mairie du Nord.\n4. Conserver la preuve de virement et la joindre à la fiche impôts.\nLes paiements par facture ou carte sont taxés automatiquement : seul le reste (liquide, virements hors facture) est à déclarer.",
     refs: ["I.2", "I.1"] },
   { all: [["taux", "pourcentage", "combien"], ["impot", "impots", "imposition", "taxe"]],
     answer: "L'impôt est calculé sur le chiffre d'affaires de la semaine, avant déduction des charges. Le taux est fixé par le gouvernement : renseignez-vous auprès du Référent Entreprise ou de l'IRS.",
