@@ -53,7 +53,7 @@ window.IRS_INTENTS = [
     answer: "Les subventions ne sont pas imposables. Les salaires qu'elles financent ne peuvent pas être déclarés une seconde fois, et l'entreprise doit pouvoir justifier l'usage des fonds.",
     refs: ["I.9"] },
   { all: [["conserver", "garder", "conservation"], ["document", "documents", "facture", "factures", "justificatif", "justificatifs", "papiers"]],
-    answer: "Factures, preuves de virement, contrats, registre du personnel et fiches impôts sont conservés au moins 3 mois. Les détruire pendant un contrôle ou une enquête est une dissimulation de preuves (art. 14.5).",
+    answer: "Factures, preuves de virement, contrats, registre du personnel et fiches impôts sont conservés au moins 3 mois. Justificatifs absents lors d'un contrôle : 1 000 $ (2 000 $ en récidive). Les détruire pendant un contrôle ou une enquête est une dissimulation de preuves (art. 14.5).",
     refs: ["I.5", "B.10"] },
 
   // ---------- Amendes ----------
@@ -150,6 +150,10 @@ window.IRS_INTENTS = [
     answer: "L'IRS, le DOJ et le SAMD sont rattachés au Los Santos County : leurs salaires figurent dans la grille des salaires du Los Santos County (sélecteur Los Santos | Blaine).",
     refs: [] },
 
+  { all: [["propriete", "proprietes", "local", "locaux", "immeuble", "batiment", "entrepot"], ["entreprise", "societe", "acheter", "achat", "vendre", "vente", "revendre"]],
+    answer: "Toute acquisition d'une propriété par une entreprise nécessite l'accord écrit de l'IRS (réponse sous une semaine). Sans accord : 70 % du prix d'achat + saisie. À la revente : 60 % minimum du prix d'achat, argent versé sur le compte de l'entreprise, contrat rédigé par un avocat. Vente sous 60 % : somme manquante, doublée en récidive.",
+    refs: ["CE.14", "B.11"] },
+
   // ---------- Véhicules ----------
   { all: [["vehicule", "voiture", "vehicules", "voitures"], ["entreprise", "societe", "boite", "fonction", "service"], ["achat", "acheter", "achete", "acquerir", "acquisition", "vendre", "vente", "revendre"]],
     answer: "Toute acquisition d'un véhicule par une entreprise doit être homologuée par l'IRS (demande avec devis, réponse sous une semaine). Sans accord : 70 % du prix d'achat + saisie.\nÀ la revente : 60 % minimum du prix concessionnaire, argent versé sur le compte de l'entreprise, contrat enregistré au registre de l'IRS.",
@@ -167,7 +171,7 @@ window.IRS_INTENTS = [
     answer: "Revendre un véhicule plus cher que son prix d'achat est interdit entre particuliers. La plus-value est saisie (récidive : saisie + 1 000 $).",
     refs: ["CC.1", "B.13"] },
   { all: [["don", "donner", "echange", "echanger", "offrir"], ["vehicule", "voiture"]],
-    answer: "Le don et l'échange de véhicules sont interdits. Ils sont traités comme une vente à 0 $ : amende égale à la somme manquante pour atteindre 60 % du prix concessionnaire.",
+    answer: "Le don et l'échange de véhicules sont interdits. Ils sont traités comme une vente à 0 $ : amende égale à la somme manquante pour atteindre 60 % du prix concessionnaire, doublée en récidive.",
     refs: ["CC.1", "B.12"] },
   { all: [["vehicule", "voiture", "vehicules", "voitures", "occasion"], ["vendre", "vente", "vend", "acheter", "achat", "achete", "revendre", "revente", "prix"]],
     answer: "Entre particuliers :\n- contrat rédigé par un avocat et enregistré au registre de l'IRS (sinon le véhicule reste au vendeur) ;\n- 2 transactions maximum sur 30 jours glissants ;\n- prix minimum : 60 % du prix concessionnaire, et pas de revente plus chère que le prix d'achat ;\n- liquide limité à 1 000 $ ;\n- don, échange et prête-nom interdits.\nVente sous 60 % : amende égale à la somme manquante, doublée en récidive, due par le vendeur et l'acheteur.",
