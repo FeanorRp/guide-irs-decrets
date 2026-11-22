@@ -135,6 +135,13 @@ window.IRS_INTENTS = [
     answer: "Les associations à but non lucratif et les œuvres caritatives déclarent et paient leurs impôts comme les entreprises.",
     refs: ["I.1"] },
 
+  { prio: 1, all: [["humane", "laboratoire", "labs"]],
+    answer: "Les activités du laboratoire Humane Labs sont suspendues depuis le 07/11/2026 et l'accès au site est interdit, sauf aux forces de l'ordre mandatées par la Mairie du Nord (décret n° 001). Pour l'IRS, aucune activité ne peut y être exercée ni déclarée pendant la suspension.",
+    refs: ["N-001"] },
+  { prio: 1, all: [["sasp", "policier", "policiers", "sherif", "sherifs", "lssd"]],
+    answer: "Dans le Nord, la sécurité relève des seuls shérifs du Nord. La SASP ne peut pas y intervenir, en service ou hors service, sauf autorisation du Shérif du Nord ou de la Maire du Nord (décret n° 002). Les perquisitions et arrestations liées à un dossier IRS y sont faites par les shérifs du Nord.",
+    refs: ["N-002", "IRS.4"] },
+
   // ---------- Véhicules ----------
   { all: [["vehicule", "voiture", "vehicules", "voitures"], ["entreprise", "societe", "boite", "fonction", "service"], ["achat", "acheter", "achete", "acquerir", "acquisition", "vendre", "vente", "revendre"]],
     answer: "Toute acquisition d'un véhicule par une entreprise doit être homologuée par l'IRS (demande avec devis, réponse sous une semaine). Sans accord : 70 % du prix d'achat + saisie.\nÀ la revente : 60 % minimum du prix concessionnaire, argent versé sur le compte de l'entreprise, contrat enregistré au registre de l'IRS.",

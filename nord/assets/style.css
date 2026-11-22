@@ -379,3 +379,48 @@ tr.detail td { background: rgba(10, 16, 34, .6); }
 .zone-switch a { flex: 1; text-align: center; padding: 8px 0; text-decoration: none; font-family: var(--serif); letter-spacing: 2px; font-size: 13px; color: var(--muted); }
 .zone-switch a.active { background: linear-gradient(180deg, #f1d9a0, #c9a464); color: #111a35; font-weight: 700; }
 .zone-switch a:not(.active):hover { background: rgba(212, 176, 113, .12); color: var(--accent); }
+
+/* ================= Thème NORD : désert, orangé doré ================= */
+:root {
+  --bg: #1a0f08;
+  --card: #26170c;
+  --card-head: #33200f;
+  --border: rgba(230, 150, 60, .25);
+  --text: #f5e6cf;
+  --muted: #c4a382;
+  --accent: #f6b85c;
+  --accent-strong: #e08a2e;
+  --navy: #2a1608;
+}
+body {
+  background:
+    radial-gradient(ellipse at 70% -10%, rgba(240, 140, 40, .16), transparent 55%),
+    radial-gradient(ellipse at 0% 100%, rgba(200, 90, 30, .10), transparent 50%),
+    var(--bg);
+  background-attachment: fixed;
+}
+.sidebar { background: linear-gradient(180deg, #160c05, #24140a); }
+.sidebar::after { background: repeating-linear-gradient(135deg, #f6b85c 0 3px, #b8661f 3px 5px, #7a3d12 5px 6px); }
+.brand-logo { filter: drop-shadow(0 3px 8px rgba(0, 0, 0, .6)) sepia(.55) saturate(1.6) hue-rotate(-12deg); }
+.hero img { filter: drop-shadow(0 6px 14px rgba(0, 0, 0, .6)) sepia(.55) saturate(1.6) hue-rotate(-12deg); }
+.page-head h1, .hero h1 { background: linear-gradient(180deg, #ffd796, #e0802a); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero { background: radial-gradient(circle at 12% 50%, rgba(240, 140, 40, .20), transparent 45%), var(--card); }
+.hero::before { border-color: rgba(240, 150, 60, .3); }
+#nav a:hover { background: rgba(240, 140, 40, .10); }
+#nav a.active { background: linear-gradient(90deg, rgba(240, 140, 40, .22), transparent); }
+.card > summary { background: linear-gradient(90deg, #3d2410, var(--card-head)); }
+.notice { background: linear-gradient(90deg, rgba(240, 140, 40, .09), transparent 60%), var(--card); }
+.sub { background: rgba(20, 10, 4, .6); }
+.sub.penal { border-left-color: #d9643a; }
+.btn { border-color: rgba(240, 150, 60, .45); }
+.btn:hover { background: rgba(240, 140, 40, .14); }
+.toolbar input, .toolbar select, .calc input, .calc select { background: rgba(20, 10, 4, .7); }
+th { background: #3d2410; }
+tr.detail td { background: rgba(20, 10, 4, .6); }
+.chat-toggle { background: linear-gradient(180deg, #ffc978, #e08a2e); color: #2a1608; border-color: #7a3d12; }
+.chat-panel header { background: linear-gradient(90deg, #3d2410, var(--card-head)); }
+.chat-form input { background: var(--bg); }
+.msg.me { background: #5a3416; }
+.msg.bot { background: #1a0f08; }
+.zone-switch a.active { background: linear-gradient(180deg, #ffc978, #e08a2e); color: #2a1608; }
+.zone-switch a:not(.active):hover { background: rgba(240, 140, 40, .14); }

@@ -108,6 +108,12 @@
 
   function byId(q) {
     var n = norm(q);
+    var nm = n.match(/\b(?:decret\s*(?:n\s*[°o]?\s*)?|n\s*-\s*)0*(\d{1,3})\b/);
+    if (nm) {
+      var nid = "N-" + ("00" + nm[1]).slice(-3);
+      var nhit = DOCS.filter(function (d) { return d.id === nid; })[0];
+      if (nhit) return nhit;
+    }
     var m = n.match(/\b(ce|irs|dc\.?e|dc|b|i|f)\s*\.?\s*(\d{1,2})\b/);
     if (m) {
       var id = (m[1].replace(".", "") === "dce" ? "DC.E" : m[1].toUpperCase() + ".") + m[2];
