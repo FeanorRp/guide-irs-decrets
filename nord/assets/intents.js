@@ -6,7 +6,7 @@
 window.IRS_INTENTS = [
   // ---------- Pouvoirs de l'IRS ----------
   { all: [["controle", "controler", "verifier", "verification", "inspect"], ["vehicule", "voiture", "voitures", "vehicules"]],
-    answer: "Pour les véhicules d'entreprise, oui : l'IRS, la mairie ou le gouvernement peuvent demander à tout moment la liste des véhicules et leurs justificatifs d'achat. Sans justificatif sous 48h, le véhicule peut être saisi. Le carnet d'usage (conducteur, date, motif du trajet) doit pouvoir être présenté.\nEn revanche, l'IRS ne fouille pas les véhicules : c'est réservé aux forces de l'ordre.",
+    answer: "Pour les véhicules d'entreprise, oui : l'IRS ou la Mairie du Nord peuvent demander à tout moment la liste des véhicules et leurs justificatifs d'achat. Sans justificatif sous 48h, le véhicule peut être saisi. Le carnet d'usage (conducteur, date, motif du trajet) doit pouvoir être présenté.\nEn revanche, l'IRS ne fouille pas les véhicules : c'est réservé aux forces de l'ordre.",
     refs: ["CE.13", "IRS.5"] },
   { all: [["fouille", "fouiller", "fouillent"]],
     answer: "Non. L'IRS ne fouille ni les personnes, ni les véhicules, ni les téléphones. Ces fouilles sont réservées aux forces de l'ordre et au juge fédéral.",
@@ -44,7 +44,7 @@ window.IRS_INTENTS = [
     answer: "1. Déclarer les revenus de la semaine sur la fiche impôts.\n2. Aller à la banque ou à un ATM.\n3. Virer le montant indiqué vers le compte de la Mairie du Nord.\n4. Conserver la preuve de virement et la joindre à la fiche impôts.\nLes paiements par facture ou carte sont taxés automatiquement : seul le reste (liquide, virements hors facture) est à déclarer.",
     refs: ["I.2", "I.1"] },
   { all: [["taux", "pourcentage", "combien"], ["impot", "impots", "imposition", "taxe"]],
-    answer: "L'impôt est calculé sur le chiffre d'affaires de la semaine, avant déduction des charges. Le taux est actuellement de 0 %.",
+    answer: "L'impôt est calculé sur le chiffre d'affaires de la semaine, avant déduction des charges. Le taux est actuellement de 0 %. La déclaration hebdomadaire reste obligatoire.",
     refs: ["I.6"] },
   { all: [["echelonne", "echelonnement", "difficulte", "difficultes", "moyens", "plusieurs fois"]],
     answer: "Une entreprise en difficulté peut demander à l'IRS, AVANT l'échéance, un paiement échelonné sur 2 à 4 semaines (avec intérêts), ou une remise des pénalités (jamais des impôts) si le retard a une cause sérieuse ou s'il s'agit d'un premier manquement. Le Chef IRS valide.",
@@ -89,7 +89,7 @@ window.IRS_INTENTS = [
 
   // ---------- Emploi ----------
   { all: [["licencier", "licenciement", "virer", "vire", "renvoyer"], ["temoin", "temoigne", "temoigner", "signale", "denonce", "plainte"]],
-    answer: "Non. Licencier un employé parce qu'il a fait un signalement à l'IRS, à la mairie ou à la justice est interdit. C'est aussi une influence de témoin (art. 15.6).",
+    answer: "Non. Licencier un employé parce qu'il a fait un signalement à l'IRS, à la Mairie du Nord ou à la justice est interdit. C'est aussi une influence de témoin (art. 15.6).",
     refs: ["CE.17", "F.7"] },
   { all: [["licencier", "licenciement", "virer", "vire", "renvoyer", "rupture", "absence", "absent"]],
     answer: "Le CDI est rompu automatiquement après plus de deux semaines d'absence. Le gérant peut aussi le rompre immédiatement en cas de condamnation pour délit majeur ou crime, ou de non-respect du règlement intérieur ou du contrat.\nLicenciement interdit pour un motif discriminatoire ou en représailles d'un signalement.",
@@ -171,13 +171,13 @@ window.IRS_INTENTS = [
 
   // ---------- Entreprise ----------
   { all: [["auto", "independant", "freelance"], ["entrepreneur", "entreprise", "independant", "freelance"]],
-    answer: "L'auto-entrepreneur se déclare à la mairie et à l'IRS. Il ne peut avoir qu'un seul employé, lui-même compris, et a les mêmes obligations fiscales qu'une entreprise. Un salarié déguisé en indépendant : 2 000 $ par personne.",
+    answer: "L'auto-entrepreneur se déclare à la Mairie du Nord et à l'IRS. Il ne peut avoir qu'un seul employé, lui-même compris, et a les mêmes obligations fiscales qu'une entreprise. Un salarié déguisé en indépendant : 2 000 $ par personne.",
     refs: ["CE.7", "B.14"] },
   { all: [["declare", "declaree", "declarer", "enregistre", "enregistrer"], ["activite", "entreprise", "commerce", "vente", "business"]],
     answer: "Une activité commerciale non déclarée entraîne une amende, la fermeture jusqu'à régularisation et le paiement des impôts dus avec intérêts. Exercice illégal d'une activité : 10 000 $ (20 000 $ en récidive).\nUne déclaration spontanée AVANT tout contrôle réduit les pénalités et évite les poursuites pénales.",
     refs: ["CE.4", "B.7"] },
   { all: [["changement", "changer", "modification", "modifier", "nouveau"], ["gerant", "nom", "siege", "activite", "tresorier", "patron"]],
-    answer: "Tout changement (siège, nom, activité, gérant) se déclare au gouvernement et à l'IRS dans les 24h. Le nouveau gérant ou trésorier remet un état des comptes dans les 24h.",
+    answer: "Tout changement (siège, nom, activité, gérant) se déclare à la Mairie du Nord et à l'IRS dans les 24h. Le nouveau gérant ou trésorier remet un état des comptes dans les 24h.",
     refs: ["CE.8", "CE.1"] },
   { all: [["gerant", "patron", "tresorier", "direction", "dirigeant"]],
     answer: "La direction compte au maximum trois membres (21 ans minimum). Le gérant et le trésorier sont personnellement responsables des impôts non payés quand ils avaient le pouvoir de les payer.",
