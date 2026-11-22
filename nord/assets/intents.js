@@ -44,7 +44,7 @@ window.IRS_INTENTS = [
     answer: "1. Déclarer les revenus de la semaine sur la fiche impôts.\n2. Aller à la banque ou à un ATM.\n3. Virer le montant indiqué vers le compte de la Mairie du Nord.\n4. Conserver la preuve de virement et la joindre à la fiche impôts.\nLes paiements par facture ou carte sont taxés automatiquement : seul le reste (liquide, virements hors facture) est à déclarer.",
     refs: ["I.2", "I.1"] },
   { all: [["taux", "pourcentage", "combien"], ["impot", "impots", "imposition", "taxe"]],
-    answer: "L'impôt est calculé sur le chiffre d'affaires de la semaine, avant déduction des charges. Le taux est fixé par le gouvernement : renseignez-vous auprès du Référent Entreprise ou de l'IRS.",
+    answer: "L'impôt est calculé sur le chiffre d'affaires de la semaine, avant déduction des charges. Le taux est actuellement de 0 %.",
     refs: ["I.6"] },
   { all: [["echelonne", "echelonnement", "difficulte", "difficultes", "moyens", "plusieurs fois"]],
     answer: "Une entreprise en difficulté peut demander à l'IRS, AVANT l'échéance, un paiement échelonné sur 2 à 4 semaines (avec intérêts), ou une remise des pénalités (jamais des impôts) si le retard a une cause sérieuse ou s'il s'agit d'un premier manquement. Le Chef IRS valide.",
@@ -122,7 +122,7 @@ window.IRS_INTENTS = [
     answer: "Être payé sans travailler, ou payer une personne inscrite au registre qui ne travaille pas, est un détournement de fonds (2 $ par dollar + prison fédérale). Le bénéficiaire et l'organisateur sont poursuivis et les sommes doivent être remboursées.",
     refs: ["CE.12"] },
   { all: [["fonction", "public", "publique", "police", "casier"]],
-    answer: "La fonction publique ne recrute que des personnes au casier vierge de tout délit majeur ou crime ; une telle condamnation entraîne un renvoi immédiat. Une fois le casier effacé par un juge, la personne peut à nouveau se porter candidate.",
+    answer: "La fonction publique du Blaine County (LSSD) ne recrute que des personnes au casier vierge de tout délit majeur ou crime ; une telle condamnation entraîne un renvoi immédiat. Une fois le casier effacé par un juge, la personne peut à nouveau se porter candidate.",
     refs: ["CE.28"] },
 
   { all: [["essai"]],
