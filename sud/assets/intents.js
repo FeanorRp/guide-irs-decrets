@@ -142,7 +142,7 @@ window.IRS_INTENTS = [
     answer: "Le salaire minimum est de 2 000 $ (décret D-03), sauf dans les entreprises privées, qui fixent librement leurs salaires (décret D-79).",
     refs: ["D-03"] },
   { all: [["prime", "primes", "bonus"]],
-    answer: "Une prime sur salaire n'est possible qu'avec l'accord préalable et écrit de la Mairie, sur justification motivée (décret D-81). Entreprises privées, avec cet accord : au maximum 2 000 $ toutes les deux semaines (une paie sur deux).",
+    answer: "Une prime sur salaire n'est possible qu'avec l'accord préalable et écrit de la Mairie, sur justification motivée (décret D-81). Entreprises privées, avec cet accord : au maximum 2 000 $, versée une paie sur trois.",
     refs: ["D-81"] },
   { prio: 1, all: [["preavis"]],
     answer: "L'employeur n'a aucun préavis à respecter (décret D-04), mais le licenciement doit reposer sur un motif prévu : condamnation pour délit majeur ou crime, ou non-respect du règlement intérieur ou du contrat.",

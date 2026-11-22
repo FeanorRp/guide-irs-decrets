@@ -143,7 +143,7 @@ window.IRS_INTENTS = [
     refs: ["N-002", "IRS.4"] },
 
   { all: [["prime", "primes", "bonus"]],
-    answer: "Dans les entreprises privées, une prime peut atteindre au maximum 2 500 $ par semaine.",
+    answer: "Dans les entreprises privées, une prime nécessite l'accord préalable et écrit de la Mairie du Nord et peut atteindre au maximum 2 500 $ par semaine.",
     refs: ["I.7"] },
 
   // ---------- Véhicules ----------
