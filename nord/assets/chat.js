@@ -290,7 +290,8 @@
 
   var REFUS = "<p>Je ne peux pas répondre à cette question.</p>" +
     "<p>Je réponds aux questions sur les impôts, les contrôles de l'IRS, les amendes, l'emploi, les entreprises et la vente de véhicules. " +
-    "Reformulez avec ces mots, tapez un numéro d'article (<i>CE.16</i>, <i>art 7.1</i>), ou adressez-vous à un agent de l'IRS.</p>";
+    "Reformulez avec ces mots, tapez un numéro d'article (<i>CE.16</i>, <i>art 7.1</i>), ou adressez-vous à un agent de l'IRS.</p>" +
+    "<p>Si votre question concerne l'autre comté, changez de guide avec le sélecteur Los Santos | Blaine.</p>";
 
   function reply(q) {
     if (ILLEGAL.test(flat(q))) {

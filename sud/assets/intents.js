@@ -182,6 +182,10 @@ window.IRS_INTENTS = [
     answer: "Tout délit commis sur Cayo Perico est considéré comme commis sur Los Santos : il relève de la SASP, du DOJ de Los Santos et de ce guide. Un même fait n'est sanctionné qu'une seule fois (décret D-94).",
     refs: ["D-94"] },
 
+  { prio: 1, all: [["sasp", "policier", "policiers", "police"], ["nord", "blaine", "frontiere"]],
+    answer: "La SASP s'arrête à la frontière du Nord : elle n'intervient pas dans le Blaine County sans l'autorisation des autorités du Nord, même pendant une poursuite. Fuir au Nord n'efface pas l'infraction : c'est une circonstance aggravante (décret D-93).",
+    refs: ["D-93"] },
+
   // ---------- Véhicules ----------
   { all: [["vehicule", "voiture", "vehicules", "voitures"], ["entreprise", "societe", "boite", "fonction", "service"], ["achat", "acheter", "achete", "acquerir", "acquisition", "vendre", "vente", "revendre"]],
     answer: "Toute acquisition d'un véhicule par une entreprise doit être homologuée par l'IRS (demande avec devis, réponse sous une semaine). Sans accord : 70 % du prix d'achat + saisie.\nÀ la revente : 60 % minimum du prix concessionnaire, argent versé sur le compte de l'entreprise, contrat enregistré au registre de l'IRS.",

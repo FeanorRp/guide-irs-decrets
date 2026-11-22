@@ -138,13 +138,17 @@ window.IRS_INTENTS = [
   { prio: 1, all: [["humane", "laboratoire", "labs"]],
     answer: "Les activités du laboratoire Humane Labs sont suspendues depuis le 07/11/2026 et l'accès au site est interdit, sauf aux forces de l'ordre mandatées par la Mairie du Nord (décret n° 001). Pour l'IRS, aucune activité ne peut y être exercée ni déclarée pendant la suspension.",
     refs: ["N-001"] },
-  { prio: 1, all: [["sasp", "policier", "policiers", "sherif", "sherifs", "lssd"]],
+  { prio: 1, all: [["sasp", "sherif", "sherifs", "lssd"]],
     answer: "Dans le Nord, la sécurité relève des seuls shérifs du Nord. La SASP ne peut pas y intervenir, en service ou hors service, sauf autorisation du Shérif du Nord ou de la Maire du Nord (décret n° 002). Les perquisitions et arrestations liées à un dossier IRS y sont faites par les shérifs du Nord.",
     refs: ["N-002", "IRS.4"] },
 
   { all: [["prime", "primes", "bonus"]],
     answer: "Dans les entreprises privées, une prime nécessite l'accord préalable et écrit de la Mairie du Nord et peut atteindre au maximum 2 500 $ par semaine.",
     refs: ["I.7"] },
+
+  { prio: 1, all: [["salaire", "salaires", "paye", "gagne", "gagner", "remuneration"], ["samd", "doj", "irs", "juge", "procureur", "medecin", "cyber", "interne", "externe"]],
+    answer: "L'IRS, le DOJ et le SAMD sont rattachés au Los Santos County : leurs salaires figurent dans la grille des salaires du Los Santos County (sélecteur Los Santos | Blaine).",
+    refs: [] },
 
   // ---------- Véhicules ----------
   { all: [["vehicule", "voiture", "vehicules", "voitures"], ["entreprise", "societe", "boite", "fonction", "service"], ["achat", "acheter", "achete", "acquerir", "acquisition", "vendre", "vente", "revendre"]],
