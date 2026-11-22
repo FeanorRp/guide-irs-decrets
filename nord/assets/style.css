@@ -373,3 +373,9 @@ tr.detail td { background: rgba(10, 16, 34, .6); }
 .sal-card th, .sal-card td { padding: 5px 6px; font-size: 13px; }
 .sal-card th { background: none; border-bottom: 1px solid var(--border); font-size: 11px; }
 .sal-card .num { text-align: right; white-space: nowrap; }
+
+/* Sélecteur de zone */
+.zone-switch { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.zone-switch a { flex: 1; text-align: center; padding: 8px 0; text-decoration: none; font-family: var(--serif); letter-spacing: 2px; font-size: 13px; color: var(--muted); }
+.zone-switch a.active { background: linear-gradient(180deg, #f1d9a0, #c9a464); color: #111a35; font-weight: 700; }
+.zone-switch a:not(.active):hover { background: rgba(212, 176, 113, .12); color: var(--accent); }

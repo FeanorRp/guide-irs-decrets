@@ -7,7 +7,7 @@
 
   var PAGES = [
     { slug: "", label: "Accueil" },
-    { slug: "decrets", label: "Décrets en vigueur" },
+    { slug: "decrets", label: "Décrets NORD" },
     { slug: "entreprises", label: "Code Entreprises" },
     { slug: "citoyens", label: "Code Citoyen" },
     { slug: "salaires", label: "Grille des salaires" },
@@ -22,7 +22,7 @@
   var DESCRIPTIONS = {
     entreprises: "Règles encadrant les entreprises de San Andreas",
     citoyens: "Règles qui s'appliquent à chaque citoyen",
-    decrets: "Décrets de la Mairie qui priment sur le guide",
+    decrets: "Décrets applicables dans la zone Nord",
     salaires: "Salaires obligatoires par service et par entreprise",
     impots: "Déclaration, paiement, difficultés de paiement",
     fiscalite: "Contrôles, enquêtes, barème des sanctions, recouvrement",
@@ -117,7 +117,7 @@
         esc(DESCRIPTIONS[p.slug]) + (n ? " - " + n + " entrées" : "") + "</span></a>";
     }).join("");
     return '<div class="hero"><img src="assets/seal.svg" alt="Sceau de l\'IRS">' +
-      '<div><div class="hero-kicker">État de San Andreas</div><h1>Guide de l\'Internal Revenue Service</h1>' +
+      '<div><div class="hero-kicker">État de San Andreas' + (G.zone ? ' - Zone ' + esc(G.zone) : '') + '</div><h1>Guide de l\'Internal Revenue Service</h1>' +
       '<div class="stars">★ ★ ★</div><div class="updated">Mise à jour : 22/11/2026</div></div></div>' +
       '<div class="notice">' + fmt(G.organisation.intro) + "</div>" +
       '<div class="grid">' + tiles + "</div>";
@@ -214,7 +214,7 @@
   // Lit une ligne du bareme : montant fixe, unite, somme due, pourcentage d'interets ou du prix
   function parseBareme(text) {
     var fixed = text.match(/(\d[\d\s.,]*)\s*\$/);
-    var pct = text.match(/(\d+)\s*%\s*(d'int|du prix d'achat|de la somme)/);
+    var pct = text.match(/(\d+)\s*%\s*(d'int|du prix d'achat)/);
     return {
       fixed: fixed ? num(fixed[1]) : 0,
       perUnit: /par (contrat|produit|personne|employé)|nombre de semaines/.test(text),
@@ -389,7 +389,7 @@
       a.classList.toggle("active", a.dataset.slug === slug);
     });
     sidebar.classList.remove("open");
-    document.title = (slug ? PAGES.filter(function (p) { return p.slug === slug; })[0].label + " - " : "") + "Guide IRS";
+    document.title = (slug ? PAGES.filter(function (p) { return p.slug === slug; })[0].label + " - " : "") + "Guide IRS" + (G.zone ? " " + G.zone : "");
 
     bindPageSearch();
     var toggle = document.getElementById("toggleAll");
