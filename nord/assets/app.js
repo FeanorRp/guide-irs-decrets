@@ -246,7 +246,9 @@
     var qty = Math.max(1, parseInt(document.getElementById("cQty").value, 10) || 1);
     var rec = document.getElementById("cRec").checked;
     var show = function (id, on) { document.getElementById(id).style.display = on ? "" : "none"; };
+    var setLabel = function (id, text) { document.getElementById(id).firstChild.nodeValue = text; };
     var label, total, detail;
+    setLabel("cSumL", "Somme concernée ($)"); setLabel("cQtyL", "Quantité");
 
     if (inf.charAt(0) === "p") {
       var p = PENAL.filter(function (x) { return x.id === inf; })[0];
@@ -256,6 +258,20 @@
       detail = money(sum) + " x " + String(p.rate).replace(".", ",") + " = " + money(total) + ". " + p.note;
     } else {
       var b = G.fiscalite.bareme[+inf.slice(1)];
+      // Solde de tout compte : 1/7e du salaire hebdomadaire par jour de retard, 30 jours maximum, doublé en récidive
+      if (/^Solde de tout compte/.test(b.infraction)) {
+        show("cRecL", true); show("cSumL", true); show("cQtyL", true);
+        setLabel("cSumL", "Salaire hebdomadaire ($)"); setLabel("cQtyL", "Jours de retard");
+        var days = Math.min(qty, 30);
+        total = sum / 7 * days * (rec ? 2 : 1);
+        label = b.infraction + (rec ? " (Type 2)" : " (Type 1)");
+        detail = "Pénalité : 1/7e du salaire hebdomadaire par jour de retard (30 jours maximum)" + (rec ? ", doublée en récidive" : "") +
+          ". Calcul : " + money(sum) + " / 7 x " + days + " jour" + (days > 1 ? "s" : "") + (rec ? " x 2" : "") + " = " + money(total) + "." +
+          (qty > 30 ? " Retard plafonné à 30 jours." : "");
+        document.getElementById("cOut").innerHTML = '<div class="total">' + money(total) + "</div><div>" + esc(detail) + "</div>";
+        document.getElementById("cOut").dataset.summary = label + " : " + money(total) + ". " + detail;
+        return;
+      }
       var text = rec ? b.type2 : b.type1;
       var r = parseBareme(text);
       show("cRecL", true); show("cSumL", r.withSum || r.pct > 0); show("cQtyL", r.perUnit);
