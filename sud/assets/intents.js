@@ -101,7 +101,7 @@ window.IRS_INTENTS = [
     answer: "L'âge minimum pour travailler est de 21 ans, pour tout poste, contrat ou stage.",
     refs: ["CE.10"] },
   { all: [["stage", "stagiaire", "stagiaires"]],
-    answer: "Un contrat de stage écrit, rédigé par un avocat, est obligatoire. Un stage dure au plus 1 mois, avec un tuteur désigné. La rémunération est facultative (jusqu'à 80 %). Un stagiaire non payé ne peut ni remplacer un employé ni travailler seul pour produire du chiffre d'affaires, sinon le stage devient un emploi payé au barème.",
+    answer: "Un contrat de stage écrit, rédigé par un avocat, est obligatoire. Un stage dure au plus 1 mois, avec un tuteur désigné. Le stagiaire est payé au minimum 2 000 $, sauf dans les entreprises privées. Un stagiaire ne peut ni remplacer un employé ni travailler seul pour produire du chiffre d'affaires, sinon le stage devient un emploi payé au barème.",
     refs: ["CE.20"] },
   { all: [["double"], ["emploi", "emplois", "travail", "boulot", "job"]],
     answer: "Le double emploi est interdit (décret D-01), sauf les exceptions du décret D-88 : décorateur ou artiste musical en job externe, si ce n'est pas l'activité principale (temps plein exclu). Décorateur : validation du Directeur du Dynasty 8 puis attestation de son patron au Bureau du Maire. Artiste musical : attestation de son label au Bureau du Maire. Photographe ou comptable en auto-entreprise, en plus d'un emploi : autorisé. Sanction : 2 000 $, 4 000 $ en récidive.",
@@ -237,7 +237,7 @@ window.IRS_INTENTS = [
     refs: ["CE.21", "B.18"] },
 
   { all: [["tombola", "tombolas", "loterie", "loteries", "lotterie", "lotteries", "tirage", "tirages"]],
-    answer: "Les tombolas et loteries entre particuliers sont interdites.\nUne entreprise ou un service public peut en organiser une si les termes du tirage et les gains sont inscrits par écrit avant la vente des tickets, et si le tirage se fait sous la direction d'un membre de l'IRS. La recette doit être déclarée.\nManquement : 5 000 $ + saisie de la recette. Recette de plus de 50 000 $ : 20 000 $ + saisie de la recette + transmission au DOJ.",
+    answer: "Les tombolas et loteries entre particuliers sont interdites.\nUne entreprise ou un service public peut en organiser une si les termes du tirage et les gains sont inscrits par écrit avant la vente des tickets, et si le tirage se fait sous la direction d'un membre de l'IRS. La recette doit être déclarée.\nManquement : 5 000 $ + saisie de la recette (10 000 $ en récidive). Recette de plus de 50 000 $ : 20 000 $ + saisie de la recette + transmission au DOJ (40 000 $ en récidive).",
     refs: ["CE.22", "CC.4", "B.21", "B.22"] },
 
   // ---------- Droits et IRS ----------
