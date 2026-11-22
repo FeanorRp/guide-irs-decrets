@@ -175,7 +175,7 @@ window.IRS_INTENTS = [
     answer: "Le Maire et le Maire Adjoint bénéficient d'une immunité : ils ne peuvent être poursuivis, sanctionnés ou entendus tant qu'elle n'est pas levée par un vote du Sénat à la majorité qualifiée (décret D-52).",
     refs: ["IRS.7", "D-52"] },
 
-  { prio: 1, all: [["frontiere", "frontieres", "fuir", "fuite", "cavale", "refugier", "refugie"]],
+  { prio: 1, all: [["frontiere", "frontieres", "fuir", "fuis", "fuit", "fuient", "fuite", "cavale", "refugier", "refugie"]],
     answer: "Passer la frontière du Nord n'efface aucune infraction : le Sud juge les infractions commises sur son territoire, quel que soit le lieu de résidence de leur auteur. Fuir au Nord est une circonstance aggravante (peine maximale + cavale). Les forces du Sud, IRS compris, n'interviennent pas au Nord sans l'autorisation des autorités du Nord (décret D-93).",
     refs: ["D-93"] },
   { prio: 1, all: [["cayo", "perico"]],
