@@ -7,7 +7,7 @@
 
   var PAGES = [
     { slug: "", label: "Accueil" },
-    { slug: "decrets", label: "Décrets NORD" },
+    { slug: "decrets", label: "Décrets Blaine County" },
     { slug: "entreprises", label: "Code Entreprises" },
     { slug: "citoyens", label: "Code Citoyen" },
     { slug: "salaires", label: "Grille des salaires" },
@@ -22,7 +22,7 @@
   var DESCRIPTIONS = {
     entreprises: "Règles encadrant les entreprises de San Andreas",
     citoyens: "Règles qui s'appliquent à chaque citoyen",
-    decrets: "Décrets applicables dans la zone Nord",
+    decrets: "Décrets applicables dans le Blaine County",
     salaires: "Salaires obligatoires par service et par entreprise",
     impots: "Déclaration, paiement, difficultés de paiement",
     fiscalite: "Contrôles, enquêtes, barème des sanctions, recouvrement",
@@ -117,7 +117,7 @@
         esc(DESCRIPTIONS[p.slug]) + (n ? " - " + n + " entrées" : "") + "</span></a>";
     }).join("");
     return '<div class="hero"><img src="assets/seal.svg" alt="Sceau de l\'IRS">' +
-      '<div><div class="hero-kicker">État de San Andreas' + (G.zone ? ' - Zone ' + esc(G.zone) : '') + '</div><h1>Guide de l\'Internal Revenue Service</h1>' +
+      '<div><div class="hero-kicker">État de San Andreas' + (G.zone ? ' - ' + esc(G.zone) : '') + '</div><h1>Guide de l\'Internal Revenue Service</h1>' +
       '<div class="stars">★ ★ ★</div><div class="updated">Mise à jour : 22/11/2026</div></div></div>' +
       '<div class="notice">' + fmt(G.organisation.intro) + "</div>" +
       '<div class="grid">' + tiles + "</div>";

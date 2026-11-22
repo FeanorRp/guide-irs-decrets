@@ -69,7 +69,7 @@ window.IRS_INTENTS = [
 
   // ---------- Liquide, fraude ----------
   { all: [["liquide", "cash", "espece", "especes", "billets"]],
-    answer: "Les paiements en liquide de plus de 1 000 $ sont interdits : amende de 25 % de la somme payée (50 % en récidive). Détenir plus de 2 000 $ en liquide sans justificatif : saisie de l'argent + amende de 50 % (art. 7.1).\nTout dépôt ou retrait de plus de 5 000 $ sur un compte d'entreprise doit pouvoir être justifié. Fractionner un paiement pour rester sous le seuil (structuration) : 5 000 $ + saisie.",
+    answer: "Les paiements en liquide de plus de 1 000 $ sont interdits. Détenir plus de 2 000 $ en liquide sans justificatif : saisie de l'argent + amende de 50 % (art. 7.1).\nTout dépôt ou retrait de plus de 5 000 $ sur un compte d'entreprise doit pouvoir être justifié. Fractionner un paiement pour rester sous le seuil (structuration) : 5 000 $ + saisie.",
     refs: ["CE.2", "B.5"] },
   { all: [["blanchiment", "blanchir", "blanchi"]],
     answer: "Le blanchiment est puni d'une amende de 5 $ par dollar blanchi, plus la prison fédérale (art. 7.2).",
