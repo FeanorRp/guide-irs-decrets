@@ -175,6 +175,13 @@ window.IRS_INTENTS = [
     answer: "Le Maire et le Maire Adjoint bénéficient d'une immunité : ils ne peuvent être poursuivis, sanctionnés ou entendus tant qu'elle n'est pas levée par un vote du Sénat à la majorité qualifiée (décret D-52).",
     refs: ["IRS.7", "D-52"] },
 
+  { prio: 1, all: [["frontiere", "frontieres", "fuir", "fuite", "cavale", "refugier", "refugie"]],
+    answer: "Passer la frontière du Nord n'efface aucune infraction : le Sud juge les infractions commises sur son territoire, quel que soit le lieu de résidence de leur auteur. Fuir au Nord est une circonstance aggravante (peine maximale + cavale). Les forces du Sud, IRS compris, n'interviennent pas au Nord sans l'autorisation des autorités du Nord (décret D-93).",
+    refs: ["D-93"] },
+  { prio: 1, all: [["cayo", "perico"]],
+    answer: "Tout délit commis sur Cayo Perico est considéré comme commis sur Los Santos : il relève de la SASP, du DOJ de Los Santos et de ce guide. Un même fait n'est sanctionné qu'une seule fois (décret D-94).",
+    refs: ["D-94"] },
+
   // ---------- Véhicules ----------
   { all: [["vehicule", "voiture", "vehicules", "voitures"], ["entreprise", "societe", "boite", "fonction", "service"], ["achat", "acheter", "achete", "acquerir", "acquisition", "vendre", "vente", "revendre"]],
     answer: "Toute acquisition d'un véhicule par une entreprise doit être homologuée par l'IRS (demande avec devis, réponse sous une semaine). Sans accord : 70 % du prix d'achat + saisie.\nÀ la revente : 60 % minimum du prix concessionnaire, argent versé sur le compte de l'entreprise, contrat enregistré au registre de l'IRS.",
